@@ -1,0 +1,11 @@
+---
+version: '3.9'
+services:
+  borg_client:
+    image: ericmiller/borgbackup:${BORGBACKUP_TAG:-latest}
+    command: tail -f /dev/null
+  borg_server:
+    image: ericmiller/borgbackup:${BORGBACKUP_TAG:-latest}
+    command: tail -f /dev/null
+    expose:
+      - 22
